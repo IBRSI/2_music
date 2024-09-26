@@ -13,30 +13,27 @@
     <script src="gesture-handler.js"></script>
   </head>
 
-  <body>
-    <a-scene
-      arjs
-      embedded
-      renderer="logarithmicDepthBuffer: true;"
-      vr-mode-ui="enabled: false"
-      gesture-detector
-      id="scene"
-    >
-  
+<body>
+<a-scene
+arjs
+embedded
+renderer="logarithmicDepthBuffer: true;"
+vr-mode-ui="enabled: false"
+gesture-detector
+id="scene"
+>
+<a-marker
+type="pattern"
+url="pattern.patt"
+raycaster="objects: .clickable"
+emitevents="true"
+cursor="fuse: false; rayOrigin: mouse;"
+id="markerA"
+>
+<a-sound src="url(Sirotkin.mp3)" autoplay="true"></a-sound>
+</a-marker>
 
-  <a-marker
-    type="pattern"
-    url="p.patt"
-    raycaster="objects: .clickable"
-    emitevents="true"
-    cursor="fuse: false; rayOrigin: mouse;"
-    id="markerA"
-  >
-<a-sound src="ur(Green_Apelsin.mp3)">
-</a-sound>
-  </a-marker>
-      
-      <a-entity camera></a-entity>
-    </a-scene>
-  </body>
+<a-entity camera></a-entity>
+</a-scene>
+</body>
 </html>
